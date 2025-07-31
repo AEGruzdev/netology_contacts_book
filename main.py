@@ -33,7 +33,6 @@ for contact in contacts_list:
     phone = contact[-2]  
     if not phone:  
         continue
-        
     main_pattern = r"(?:\+7|8)\s*\(?(\d{3})\)?[\s-]*(\d{3})[\s-]*(\d{2})[\s-]*(\d{2})"
     phone = re.sub(main_pattern, r"+7(\1)\2-\3-\4", phone)
     ext_pattern = r"(?:\s*\(?(?:доб)\.?\s*(\d+)\)?)"
